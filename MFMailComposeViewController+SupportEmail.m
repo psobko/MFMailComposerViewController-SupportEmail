@@ -51,7 +51,7 @@ enum SupportDataOption const defaultOptions = SupportDataOptionAppName | Support
 
     [mailComposeVC setSubject:subject];
     [mailComposeVC setMessageBody:[mailComposeVC emailBodyWithMessageString:message
-                                                                    options:defaultOptions]
+                                                                    options:options]
                            isHTML:NO];
     [mailComposeVC setToRecipients:recepients];
     mailComposeVC.mailComposeDelegate = mailComposeVC;
