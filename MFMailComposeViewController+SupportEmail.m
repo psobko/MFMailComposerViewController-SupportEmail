@@ -267,7 +267,11 @@ typedef NSString * (^DeviceModelBlock)();
                                   @"unknown":     ^{ return @"Unknown"; }
                                   };
     
-    NSString *lookupString = deviceNames[string] ? string : @"Unknown";
+     NSString *lookupString =  @"unknown";
+    if(string && deviceNames[string])
+    {
+        lookupString = string;
+    }
     
     return ((DeviceModelBlock)deviceNames[lookupString])();
 }
